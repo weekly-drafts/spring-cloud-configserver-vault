@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: configclient
+  cloud:
+    config:
+      token: myroot
+      uri: http://localhost:8888
