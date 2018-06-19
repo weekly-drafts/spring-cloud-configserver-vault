@@ -1,0 +1,3 @@
+client:
+  pseudo:
+    property: Property value loaded from File System

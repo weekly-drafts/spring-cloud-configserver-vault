@@ -3,6 +3,22 @@ server:
 
 spring:
   profiles:
-    active: native
+    active: native, git, vault
   application:
     name: configserver
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file://${user.home}/config-repo
+        git:
+          uri: https://github.com/weekly-drafts/config-repo-spring-cloud-configserver-vault
+        vault:
+          port: 8200
+          host: 127.0.01
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, env
